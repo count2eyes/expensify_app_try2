@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should createItem 1`] = `
+<div>
+  <h3>
+    Add your expense here
+  </h3>
+  <Connect(AddExpenseForm)
+    onSubmit={[Function]}
+  />
+</div>
+`;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseList correctly with expenses 1`] = `
+<div>
+  <ExpenseItem
+    expense={
+      Object {
+        "amount": 2.75,
+        "createdAt": "1970-01-01T00:00:00.000Z",
+        "description": "coffee",
+        "id": "1",
+        "note": "decaff-rebuff",
+      }
+    }
+    key="1"
+  />
+</div>
+`;
+
+exports[`should render ExpenseList correctly without expenses 1`] = `
+<div>
+  <h3>
+    No expense
+  </h3>
+</div>
+`;
