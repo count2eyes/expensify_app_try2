@@ -9,7 +9,7 @@ exports[`should render editItem page correctly 1`] = `
     expense={
       Object {
         "amount": 2.75,
-        "createdAt": "1970-01-01T00:00:00.000Z",
+        "createdAt": 0,
         "description": "coffee",
         "id": "1",
         "note": "decaff-rebuff",

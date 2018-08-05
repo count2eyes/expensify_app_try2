@@ -26,7 +26,7 @@ export class AddExpenseForm extends React.Component {
 
   onAmountChange = e => {
     const amount = e.target.value;
-    if (/^\d*(\.\d{0,2})?$/.test(amount)) {
+    if (!amount || amount.match(/^\d*(\.\d{0,2})?$/)) {
       this.setState(() => ({ amount }));
     } else return undefined;
   };
@@ -51,9 +51,9 @@ export class AddExpenseForm extends React.Component {
       this.setState(() => ({ error: "" }));
       this.props.onSubmit({
         description: this.state.description,
-        amount: this.state.amount,
+        amount: parseFloat(this.state.amount, 10),
         note: this.state.note,
-        createdAt: moment(this.state.createdAt)
+        createdAt: this.state.createdAt.valueOf()
       });
     }
   };

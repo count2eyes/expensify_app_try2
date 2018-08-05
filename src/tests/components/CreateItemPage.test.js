@@ -3,14 +3,16 @@ import { shallow } from "enzyme";
 import { CreateItem } from "../../components/CreateItemPage";
 import expenses from "../fixtures/expenses";
 
-let wrapper, addExpense, history;
+let wrapper, startAddExpense, history;
 
 beforeEach(() => {
-  addExpense = jest.fn();
+  startAddExpense = jest.fn();
   history = {
     push: jest.fn()
   };
-  wrapper = shallow(<CreateItem addExpense={addExpense} history={history} />);
+  wrapper = shallow(
+    <CreateItem startAddExpense={startAddExpense} history={history} />
+  );
 });
 
 test("should createItem", () => {
@@ -18,8 +20,7 @@ test("should createItem", () => {
 });
 
 test("should createItem", () => {
-  console.log();
   wrapper.find("Connect(AddExpenseForm)").prop("onSubmit")(expenses[1]);
   expect(history.push).toHaveBeenLastCalledWith("/");
-  expect(addExpense).toHaveBeenLastCalledWith(expenses[1]);
+  expect(startAddExpense).toHaveBeenLastCalledWith(expenses[1]);
 });

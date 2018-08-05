@@ -6,20 +6,24 @@ export default [
     description: "coffee",
     amount: 2.75,
     note: "decaff-rebuff",
-    createdAt: moment(0)
+    createdAt: moment(0).valueOf()
   },
   {
     id: "2",
     description: "fare",
     amount: 12.5,
     note: "ubar no care",
-    createdAt: moment(0).add(2, "days")
+    createdAt: moment(0)
+      .add(2, "days")
+      .valueOf()
   },
   {
     id: "3",
     description: "dinner",
     amount: 23.85,
     note: "meh",
-    createdAt: moment(0).subtract(2, "days")
+    createdAt: moment(0)
+      .subtract(2, "days")
+      .valueOf()
   }
 ];

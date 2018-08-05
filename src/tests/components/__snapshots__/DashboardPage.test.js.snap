@@ -6,6 +6,7 @@ exports[`should render Dashboard page correctly 1`] = `
     Your expenses
   </h3>
   <Connect(ExpenseListFilters) />
+  <Connect(ExpensesSummary) />
   <Connect(ExpenseList) />
 </div>
 `;
