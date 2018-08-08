@@ -1,6 +1,5 @@
 import moment from "moment";
 import expenses from "../fixtures/expenses";
-import { state, altState } from "../fixtures/filters";
 
 import selector from "../../selectors/expenses";
 

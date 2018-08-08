@@ -15,7 +15,7 @@ module.exports = (env, argv) => {
   const CSSExtract = new MiniCssExtractPlugin({ filename: "styles.css" });
   return {
     mode: "development",
-    entry: "./src/app.js",
+    entry: ["babel-polyfill", "./src/app.js"],
     module: {
       rules: [
         { use: ["babel-loader"], exclude: /node_modules/, test: /\.js$/ },

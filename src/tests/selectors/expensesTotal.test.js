@@ -1,4 +1,3 @@
-import React from "react";
 import expensesTotal from "../../selectors/expensesTotal";
 import expenses from "../fixtures/expenses";
 
